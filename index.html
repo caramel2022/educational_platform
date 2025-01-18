@@ -1,9 +1,14 @@
-<!DOCTYPE html>
+/
+</div><!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    ...<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة التعلم التفاعلية</title>
+    <title>منصة التعلم الذكية</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -35,10 +40,10 @@
         }
 
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
@@ -51,43 +56,92 @@
 
         .subject-card {
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: block;
+            position: relative;
+            cursor: pointer;
         }
 
         .subject-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
         }
 
         .subject-card img {
             width: 100%;
             height: 250px;
             object-fit: cover;
+            filter: brightness(0.8);
+            transition: filter 0.3s ease;
+        }
+
+        .subject-card:hover img {
+            filter: brightness(1);
         }
 
         .subject-card-content {
-            padding: 15px;
+            padding: 20px;
             text-align: center;
         }
 
         .subject-card-content h2 {
             color: var(--primary-color);
             margin-bottom: 10px;
+            font-size: 1.5rem;
         }
 
         .subject-card-content p {
             color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .interactive-section {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .interactive-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .quiz-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .quiz-button:hover {
+            background-color: var(--primary-color);
         }
 
         footer {
             background-color: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px 0;
             margin-top: 30px;
         }
 
@@ -101,84 +155,92 @@
 <body>
     <header>
         <div class="container">
-            <h1>منصة التعلم التفاعلية</h1>
-            <p>تعلم بذكاء، تقدم بثقة</p>
+            <h1>منصة التعلم الذكية</h1>
+            <p>نحو مستقبل تعليمي مشرق</p>
         </div>
     </header>
 
     <main class="container">
         <div class="subjects-grid">
-            <!-- Arabic Language Section -->
-            <a href="#" class="subject-card" id="arabic-section">
-                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" alt="اللغة العربية">
+            <a href="arabic_language.html" class="subject-card" id="arabic-section">
+                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" alt="التعليم الصريح">
                 <div class="subject-card-content">
-                    <h2>اللغة العربية</h2>
-                    <p>تعلم قواعد اللغة العربية والأدب والتعبير</p>
+                    <h2>التعليم الصريح</h2>
+                    <p>تعلم المهارات اللغوية والتواصلية بوضوح</p>
                 </div>
             </a>
 
-            <!-- Islamic Studies Section -->
-            <a href="#" class="subject-card" id="islamic-section">
-                <img src="https://images.unsplash.com/photo-1589517405618-4b8525c07b83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="التربية الإسلامية">
+            <a href="islamic_studies.html" class="subject-card" id="islamic-section">
+                <img src="https://i.ibb.co/bsLX6vb/pngtree-mosques-islamic-background-design-frame-png-image-8532097.png" alt="التربية الإسلامية">
                 <div class="subject-card-content">
                     <h2>التربية الإسلامية</h2>
-                    <p>تعمق في علوم الدين والأخلاق الإسلامية</p>
+                    <p>تعلم القيم والأخلاق الإسلامية بعمق وفهم</p>
                 </div>
             </a>
 
-            <!-- Social Studies Section -->
-            <a href="#" class="subject-card" id="social-section">
-                <img src="https://images.unsplash.com/photo-1532619675605-9eed1a2a9a83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="الدراسات الاجتماعية">
+            <div class="subject-card" data-subject="social">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="الاجتماعيات">
                 <div class="subject-card-content">
-                    <h2>الدراسات الاجتماعية</h2>
+                    <h2>الاجتماعيات</h2>
                     <p>اكتشف التاريخ والجغرافيا والمجتمع</p>
                 </div>
-            </a>
+            </div>
 
-            <!-- French Language Section -->
-            <a href="#" class="subject-card" id="french-section">
-                <img src="https://images.unsplash.com/photo-1596524430615-2252b68a83f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="اللغة الفرنسية">
+            <a href="level_based_teaching.html" class="subject-card" id="french-section">
+                <img src="https://images.unsplash.com/photo-1617545546399-8cb6a0ce9ea3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="التدريس وفق المستوى المناسب">
                 <div class="subject-card-content">
-                    <h2>اللغة الفرنسية</h2>
-                    <p>تعلم اللغة الفرنسية بطريقة سهلة وممتعة</p>
+                    <h2>التدريس وفق المستوى المناسب</h2>
+                    <p>تعليم مخصص يراعي الفروق الفردية والقدرات المتنوعة</p>
                 </div>
             </a>
 
-            <!-- Mathematics Section -->
-            <a href="#" class="subject-card" id="math-section">
+            <div class="subject-card" data-subject="math">
                 <img src="https://images.unsplash.com/photo-1635372295420-46f7850bbd38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="الرياضيات">
                 <div class="subject-card-content">
                     <h2>الرياضيات</h2>
                     <p>استكشف عالم الأرقام والمنطق والحساب</p>
                 </div>
-            </a>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <h2>اختبر معلوماتك</h2>
+            <p>هل أنت مستعد للتحدي؟ اضغط على زر الاختبار للبدء</p>
+            <button class="quiz-button" id="start-quiz">ابدأ الاختبار الآن</button>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 منصة التعلم التفاعلية. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2025 منصة التعلم الذكية. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <script>
-        // Interactive section handling
-        const sections = [
-            { id: 'arabic-section', name: 'اللغة العربية' },
-            { id: 'islamic-section', name: 'التربية الإسلامية' },
-            { id: 'social-section', name: 'الدراسات الاجتماعية' },
-            { id: 'french-section', name: 'اللغة الفرنسية' },
-            { id: 'math-section', name: 'الرياضيات' }
-        ];
-
-        sections.forEach(section => {
-            const sectionElement = document.getElementById(section.id);
-            sectionElement.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert(`سيتم توجيهك إلى قسم ${section.name} قريبًا`);
-                // Future: Add navigation logic to specific subject pages
+        // Interactive subject cards
+        document.querySelectorAll('.subject-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const subject = card.getAttribute('data-subject');
+                alert(`سيتم توجيهك إلى قسم ${getSubjectName(subject)} قريبًا`);
             });
         });
+
+        // Quiz interaction
+        document.getElementById('start-quiz').addEventListener('click', () => {
+            alert('سيتم بدء الاختبار التجريبي قريبًا. استعد!');
+        });
+
+        // Helper function to get subject name
+        function getSubjectName(subjectCode) {
+            const subjects = {
+                'arabic': 'اللغة العربية',
+                'islamic': 'التربية الإسلامية',
+                'social': 'الاجتماعيات',
+                'french': 'اللغة الفرنسية',
+                'math': 'الرياضيات'
+            };
+            return subjects[subjectCode] || 'المادة';
+        }
     </script>
 </body>
 </html>
