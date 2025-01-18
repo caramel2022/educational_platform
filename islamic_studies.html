@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التربية الإسلامية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f6f7;
+            --text-color: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .home-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .home-icon:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1) rotate(360deg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="web.html" class="home-icon" title="العودة إلى الصفحة الرئيسية">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <header>
+        <div class="container">
+            <h1>التربية الإسلامية</h1>
+            <p>رحلة في عالم القيم والمعرفة الإسلامية</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <img src="https://i.ibb.co/bsLX6vb/pngtree-mosques-islamic-background-design-frame-png-image-8532097.png" alt="التربية الإسلامية" class="hero-image">
+        
+        <div class="content">
+            <h2>مرحبًا بكم في رحاب التربية الإسلامية</h2>
+            <p>نهدف إلى تقديم تعليم إسلامي متكامل يجمع بين العلم والقيم والأخلاق. سنستكشف معًا جوانب متعددة من الثقافة والتراث الإسلامي.</p>
+            
+            <h3>محاور التعلم</h3>
+            <ul>
+                <li>القرآن الكريم وعلومه</li>
+                <li>السيرة النبوية</li>
+                <li>الأخلاق الإسلامية</li>
+                <li>الفقه والعبادات</li>
+                <li>التاريخ الإسلامي</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        // Future interactivity can be added here
+    </script>
+</body>
+</html>

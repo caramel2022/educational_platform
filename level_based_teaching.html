@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التدريس وفق المستوى المناسب</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f6f7;
+            --text-color: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .home-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .home-icon:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1) rotate(360deg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .level-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .level-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+
+        .level-card h2 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .level-card p {
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .levels-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="web.html" class="home-icon" title="العودة إلى الصفحة الرئيسية">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <header>
+        <div class="container">
+            <h1>التدريس وفق المستوى المناسب</h1>
+            <p>نهج تعليمي يراعي الفروق الفردية ويعزز التعلم المخصص</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="levels-grid">
+            <div class="level-card">
+                <h2>المستوى المبتدئ</h2>
+                <p>برنامج تعليمي مصمم للمتعلمين الجدد، يركز على الأساسيات والمهارات الأولية</p>
+            </div>
+
+            <div class="level-card">
+                <h2>المستوى المتوسط</h2>
+                <p>تعليم متقدم يبني على المهارات الأساسية ويعمق الفهم والممارسة</p>
+            </div>
+
+            <div class="level-card">
+                <h2>المستوى المتقدم</h2>
+                <p>برنامج متخصص للمتعلمين ذوي الخبرة، يركز على التحليل والإبداع</p>
+            </div>
+
+            <div class="level-card">
+                <h2>التعلم الفردي</h2>
+                <p>مقاربة شخصية تصمم المحتوى التعليمي وفقًا للاحتياجات الفردية لكل متعلم</p>
+            </div>
+
+            <div class="level-card">
+                <h2>التقييم المستمر</h2>
+                <p>نظام تقييم دينامي يتتبع التقدم ويعدل الاستراتيجيات التعليمية بشكل مستمر</p>
+            </div>
+
+            <div class="level-card">
+                <h2>الدعم الإضافي</h2>
+                <p>موارد وأدوات إضافية لدعم المتعلمين في تجاوز التحديات وتحقيق أهدافهم</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Future interactivity can be added here
+        document.querySelectorAll('.level-card').forEach(card => {
+            card.addEventListener('click', () => {
+                alert('سيتم توفير المزيد من التفاصيل قريبًا');
+            });
+        });
+    </script>
+</body>
+</html>
